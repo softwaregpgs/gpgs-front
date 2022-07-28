@@ -26,7 +26,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatTabsModule} from '@angular/material/tabs'
+import {MatTabsModule} from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list';
+import { ListaMenuComponent } from './lista-menu/lista-menu.component';
 
 
 
@@ -34,7 +36,8 @@ import {MatTabsModule} from '@angular/material/tabs'
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ListaMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -48,11 +51,12 @@ import {MatTabsModule} from '@angular/material/tabs'
     MatSidenavModule,
     MatTabsModule,
     MatSidenavModule,
-    RouterModule.forRoot(routes)
+    MatListModule,
   ],
-  exports:[RouterModule,
+  exports:[
     MatTabsModule,
-    MatSidenavModule],
+    MatSidenavModule,
+    MatListModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
