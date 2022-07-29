@@ -29,6 +29,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { ListaMenuComponent } from './lista-menu/lista-menu.component';
+import { MapaComponent } from './mapa/mapa.component';
 
 
 
@@ -37,7 +38,8 @@ import { ListaMenuComponent } from './lista-menu/lista-menu.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ListaMenuComponent
+    ListaMenuComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { ListaMenuComponent } from './lista-menu/lista-menu.component';
   exports:[
     MatTabsModule,
     MatSidenavModule,
-    MatListModule],
+    MatListModule,
+  MatCardModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
