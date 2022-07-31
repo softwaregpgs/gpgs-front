@@ -2,11 +2,6 @@ import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './home/home.component';
-import { Routes, RouterModule } from '@angular/router';
-const routes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
-];
 
 /**
  * COMPONENTS
@@ -27,8 +22,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field'
 import { MatListModule } from '@angular/material/list';
 import { ListaMenuComponent } from './lista-menu/lista-menu.component';
+import { MapaComponent } from './mapa/mapa.component';
 
 
 
@@ -37,7 +34,8 @@ import { ListaMenuComponent } from './lista-menu/lista-menu.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ListaMenuComponent
+    ListaMenuComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -52,11 +50,13 @@ import { ListaMenuComponent } from './lista-menu/lista-menu.component';
     MatTabsModule,
     MatSidenavModule,
     MatListModule,
+    MatFormFieldModule,
   ],
   exports:[
     MatTabsModule,
     MatSidenavModule,
-    MatListModule],
+    MatListModule,
+  MatCardModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

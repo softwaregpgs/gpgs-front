@@ -1,0 +1,15 @@
+#map {
+    height: 80vh;
+    width: 100%;
+}
+
+div {
+    align-items: center;
+}
+
+button {
+    background-color: rgb(29, 191, 212);
+    color: white;
+    font-size: small;
+    width: 100px;
+}

@@ -9,11 +9,19 @@
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-            <li>
-                <a routerLink="/owner">Mi perfil</a>
+            <li fxFlex="row">
+                <a routerLink="/mapa">
+                    <mat-icon>map</mat-icon> Mapa</a>
             </li>
-            <li>
-                <a routerLink="/account">Cerrar sesión</a>
+            <li fxFlex="row">
+                <a routerLink="/home">
+                    <mat-icon>account_circle</mat-icon>
+                </a>
+            </li>
+            <li fxFlex="row">
+                <a routerLink="/home">
+                    <mat-icon>logout</mat-icon>
+                </a>
             </li>
         </ul>
     </div>
