@@ -1,47 +1,59 @@
 {
-  "name": "gpgs-front",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^14.1.0",
-    "@angular/cdk": "^14.1.0",
-    "@angular/common": "^14.1.0",
-    "@angular/compiler": "^14.1.0",
-    "@angular/core": "^14.1.0",
-    "@angular/flex-layout": "^14.0.0-beta.40",
-    "@angular/forms": "^14.1.0",
-    "@angular/material": "^14.1.0",
-    "@angular/platform-browser": "^14.1.0",
-    "@angular/platform-browser-dynamic": "^14.1.0",
-    "@angular/router": "^14.1.0",
-    "@popperjs/core": "^2.11.5",
-    "@types/leaflet": "^1.7.11",
-    "angular-cli-ghpages": "^1.0.3",
-    "bootstrap": "^5.2.0",
-    "jquery": "^3.6.0",
-    "leaflet": "^1.8.0",
-    "rxjs": "~7.5.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^14.1.0",
-    "@angular/cli": "~14.1.0",
-    "@angular/compiler-cli": "^14.1.0",
-    "@types/jasmine": "~4.0.0",
-    "jasmine-core": "~4.2.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.7.2"
-  }
+    "name": "gpgs-front",
+    "version": "0.0.0",
+    "scripts": {
+        "ng": "ng",
+        "start": "node server.js",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "lite": "lite-server",
+        "postinstall": "ng build --prod"
+
+    },
+
+    "private": true,
+    "dependencies": {
+        "@angular/animations": "^14.1.0",
+        "@angular/cdk": "^14.1.0",
+        "@angular/common": "^14.1.0",
+        "@angular/compiler": "^14.1.0",
+        "@angular/core": "^14.1.0",
+        "@angular/flex-layout": "^14.0.0-beta.40",
+        "@angular/forms": "^14.1.0",
+        "@angular/material": "^14.1.0",
+        "@angular/platform-browser": "^14.1.0",
+        "@angular/platform-browser-dynamic": "^14.1.0",
+        "@angular/router": "^14.1.0",
+        "@popperjs/core": "^2.11.5",
+        "@types/leaflet": "^1.7.11",
+        "angular-cli-ghpages": "^1.0.3",
+        "bootstrap": "^5.2.0",
+        "express": "^4.18.1",
+        "jquery": "^3.6.0",
+        "leaflet": "^1.8.0",
+        "path": "^0.12.7",
+        "rxjs": "~7.5.0",
+        "tslib": "^2.3.0",
+        "zone.js": "~0.11.4"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "^14.1.0",
+        "@angular/cli": "~14.1.0",
+        "@angular/compiler-cli": "^14.1.0",
+        "@types/jasmine": "~4.0.0",
+        "jasmine-core": "~4.2.0",
+        "karma": "~6.4.0",
+        "karma-chrome-launcher": "~3.1.0",
+        "karma-coverage": "~2.2.0",
+        "karma-jasmine": "~5.1.0",
+        "karma-jasmine-html-reporter": "~2.0.0",
+        "typescript": "~4.7.2"
+    },
+
+    "engines": {
+        "node": "16.15.0",
+        "npm": "8.13.2"
+    }
 }
