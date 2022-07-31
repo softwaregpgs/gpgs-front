@@ -10,3 +10,8 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.btn {
+    background-color: rgb(29, 191, 212);
+    color: white;
+}

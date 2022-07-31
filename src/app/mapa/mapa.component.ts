@@ -39,32 +39,20 @@ export class MapaComponent implements OnInit {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 18,
- 
-    }).addTo(this.map);
 
-    const icon = L.icon({
-      iconUrl: 'assets/images/marker-icon.png',
-      shadowUrl: 'assets/images/marker-shadow.png',
-      popupAnchor: [13, 0],
-    });
+    }).addTo(this.map);
 
     this.getCurrentPosition().subscribe((position: any) => {
       this.map.flyTo([position.latitude, position.longitude], 13);
 
-      const marker = L.marker([position.latitude, position.longitude]).bindPopup(`<mat-card class="mat-elevation-z4">
-      <mat-card-header>
-          <mat-card-title>Empresa</mat-card-title>
-      </mat-card-header>
-      
-      <mat-card-content>
-          <p>
-              Esto es una empresa
-          </p>
-      </mat-card-content>
-      <mat-card-actions>
-          <button mat-button>Ver empresa</button>
-      </mat-card-actions>
-  </mat-card>`);
+      const marker = L.marker([position.latitude, position.longitude]).bindPopup(`<div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="./../assets/oscar.jpg" alt="Imagen empresa">
+      <div class="card-body">
+        <h1>Empresa </h1>
+        <p class="card-text">Esto es una empresa.</p>
+        <button class="btn">Ver empresa</button>
+      </div>
+    </div>`);
       marker.addTo(this.map);
     });
   }
