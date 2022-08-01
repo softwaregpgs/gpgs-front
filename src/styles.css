@@ -15,3 +15,7 @@ body {
     background-color: rgb(29, 191, 212);
     color: white;
 }
+
+.card {
+    width: 18rem;
+}
