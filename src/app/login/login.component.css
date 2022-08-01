@@ -1,0 +1,70 @@
+h1 {
+    color: rgb(29, 191, 212);
+}
+
+.btnIniciar {
+    background-color: rgb(29, 191, 212);
+    margin-right: 80px
+}
+
+.btnRegistrar {
+    background-color: rgb(29, 191, 212);
+}
+
+mat-card-actions {
+    margin-left: 15%;
+}
+
+.login {
+    margin-top: 5%;
+    width: 50%;
+    padding: 5%;
+    margin-left: 25%;
+}
+
+mat-form-field {
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+h1 {
+    margin-left: 40%;
+}
+
+@media(max-width: 600px) {
+    mat-form-field,
+    mat-card-actions,
+    .login {
+        width: 100%;
+        margin-left: 0;
+    }
+    button {
+        font-size: x-small;
+        text-align: center;
+    }
+}
+
+@media(max-width: 1024px) {
+    mat-form-field,
+    mat-card-actions,
+    .login {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    color: rgb(29, 191, 212);
+}
+
+a:hover {
+    color: black;
+}
+
+.btnIniciar:hover,
+.btnRegistrar:hover {
+    color: white;
+}
