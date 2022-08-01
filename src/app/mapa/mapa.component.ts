@@ -42,10 +42,16 @@ export class MapaComponent implements OnInit {
 
     }).addTo(this.map);
 
+    const icon = L.icon({
+      iconUrl: 'assets/images/marker-icon.png',
+      shadowUrl: 'assets/images/marker-shadow.png',
+      popupAnchor: [13, 0],
+    });
+
     this.getCurrentPosition().subscribe((position: any) => {
       this.map.flyTo([position.latitude, position.longitude], 13);
 
-      const marker = L.marker([position.latitude, position.longitude]).bindPopup(`<div class="card" style="width: 18rem;">
+      const marker = L.marker([position.latitude, position.longitude],{icon}).bindPopup(`<div class="card" style="width: 18rem;">
       <img class="card-img-top" src="./../assets/oscar.jpg" alt="Imagen empresa">
       <div class="card-body">
         <h1>Empresa </h1>

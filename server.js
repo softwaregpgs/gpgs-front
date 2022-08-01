@@ -8,4 +8,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/dist/gpgs-front/index.html'));
 });
 
+app.get('/mapa', function(req, res) {
+    res.sendFile(path.join(__dirname + '/dist/gpgs-front/index.html'));
+});
+
+app.get('/home', function(req, res) {
+    res.sendFile(path.join(__dirname + '/dist/gpgs-front/index.html'));
+});
+
 app.listen(process.env.PORT || 8080);
