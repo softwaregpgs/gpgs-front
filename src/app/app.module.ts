@@ -1,7 +1,7 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HomeComponent } from './home/home.component';
+
 
 /**
  * COMPONENTS
@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { ListaMenuComponent } from './lista-menu/lista-menu.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { LoginComponent } from './login/login.component';
 
 /**
  * 
@@ -24,9 +28,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import { MatListModule } from '@angular/material/list';
-import { ListaMenuComponent } from './lista-menu/lista-menu.component';
-import { MapaComponent } from './mapa/mapa.component';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -35,7 +38,8 @@ import { MapaComponent } from './mapa/mapa.component';
     HeaderComponent,
     HomeComponent,
     ListaMenuComponent,
-    MapaComponent
+    MapaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -51,11 +55,14 @@ import { MapaComponent } from './mapa/mapa.component';
     MatSidenavModule,
     MatListModule,
     MatFormFieldModule,
+    MatMenuModule,
+    MatInputModule,
   ],
   exports:[
     MatTabsModule,
     MatSidenavModule,
     MatListModule,
+    MatMenuModule,
   MatCardModule],
   providers: [],
   bootstrap: [AppComponent],
